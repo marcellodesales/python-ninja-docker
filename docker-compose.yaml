@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+
+  # Base docker image to be used in image tencent-arc/nvidea:python-3.8-ninja-1.8.2
+  # It can be used to build any machine learning, agumented reality, etc.
+  GFPGAN-base:
+    image: marcellodesales/ubuntu:python-3.8-ninja-1.8.2
+    build:
+      context: .
+      args:
+        # Python 3.10 fails: AttributeError: module 'collections' has no attribute 'MutableMapping' https://stackoverflow.com/a/69464772/433814
+        # Python 3.9 fails: cannot import name 'sysconfig' from 'distutils' (/usr/lib/python3.9/distutils/__init__.py)
+        BUILDER_PYTHON_VERSION: "3.8"
+        BUILDER_NINJA_VERSION: "1.10.2.3"

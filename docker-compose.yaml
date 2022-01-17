@@ -4,8 +4,8 @@ services:
 
   # Base docker image to be used in image tencent-arc/nvidea:python-3.8-ninja-1.8.2
   # It can be used to build any machine learning, agumented reality, etc.
-  GFPGAN-base:
-    image: marcellodesales/ubuntu:python-3.8-ninja-1.8.2
+  ubuntu-python-ninja:
+    image: marcellodesales/ubuntu-python-ninja
     build:
       context: .
       args:

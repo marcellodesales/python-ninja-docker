@@ -2,7 +2,6 @@ ARG BUILDER_PYTHON_VERSION
 ARG BUILDER_NINJA_VERSION
 
 FROM ubuntu
-#FROM ghcr.io/linuxserver/baseimage-ubuntu:focal-version-9c1e9b3c
 
 # https://askubuntu.com/questions/909277/avoiding-user-interaction-with-tzdata-when-installing-certbot-in-a-docker-contai/1013396#1013396
 ARG DEBIAN_FRONTEND=noninteractive
